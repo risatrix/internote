@@ -1,0 +1,51 @@
+/* Off Canvas CSS
+/* This is not meant to be one-size-fits-all
+/* Out the box it will give you a 250px wide menu on the right, with js
+/* And a very basic non-js fallback
+*/
+
+/*When we know the offcanvas js is ready, we hide the target menu 
+and set up the offcanvas menu underneat all the rest of the content*/
+
+.intranote {
+    position: absolute;
+    right: -100%;
+}
+
+.intranote.active {
+    right: 0;
+}
+
+.intranote.active, .intranote.visible {
+    position: static;
+}
+
+
+.csstransforms3d.csstransitions .intranote {
+    right: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -o-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    -webkit-transition: -webkit-transform 300ms ease-in-out;
+    -moz-transition: -moz-transform 300ms ease-in-out;
+    -o-transition: -o-transform 300ms ease-in-out;
+    transition: transform 300ms ease-in-out;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+	}
+
+.csstransforms3d.csstransitions.note-on .intranote.active{
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    -ms-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+    -o-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    -webkit-transition: -webkit-transform 300ms ease-in-out;
+    -moz-transition: -moz-transform 300ms ease-in-out;
+    -o-transition: -o-transform 300ms ease-in-out;
+    transition: transform 300ms ease-in-out;
+}

@@ -1,0 +1,21 @@
+ initCloseNotes: function () {
+            if (this.is_nav_open == true) {
+              // close navigation after transition or immediately
+              var duration = (transition_end && transition_prop) ? 
+                parseFloat(window.getComputedStyle($wrapper[0], '')[transition_prop + 'Duration']) : 0;
+              if (duration > 0) {
+                $(document).on('transition_end', this.closeNotes);
+              } else {
+                this.closeNotes(null);
+              }
+            }
+            $doc.removeClass(this.settings.nav_class);
+            $('.notes-container p').removeClass('active');
+        },
+        closeNotes: function(e) {
+            if (e && e.target === $wrapper) {
+              $(document).off(transition_end, this.closeNotes);
+            }
+            this.is_nav_open = false;
+            // $wrapper.width('');
+        },
