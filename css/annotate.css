@@ -7,21 +7,21 @@
 /*When we know the offcanvas js is ready, we hide the target menu 
 and set up the offcanvas menu underneat all the rest of the content*/
 
-.intranote {
+.internote {
     position: absolute;
     right: -100%;
 }
 
-.intranote.active {
+.internote.active {
     right: 0;
 }
 
-.intranote.active, .intranote.visible {
+.internote.active, .internote.visible {
     position: static;
 }
 
 
-.csstransforms3d.csstransitions .intranote {
+.csstransforms3d.csstransitions .internote {
     right: 0;
     -webkit-transform: translate3d(100%, 0, 0);
     -moz-transform: translate3d(100%, 0, 0);
@@ -39,7 +39,7 @@ and set up the offcanvas menu underneat all the rest of the content*/
     backface-visibility: hidden;
 	}
 
-.csstransforms3d.csstransitions.note-on .intranote.active{
+.csstransforms3d.csstransitions.note-on .internote.active{
     -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
     -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
     -ms-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);

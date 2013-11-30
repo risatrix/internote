@@ -49,7 +49,7 @@
             $('.fn').each (function(index){
               var graf = $(this).parents('p');
               $(this).attr('data-index', index);
-              var note = $(notes[index]).addClass('intranote');
+              var note = $(notes[index]).addClass('internote');
               $(note).appendTo(graf);
             });
         },
@@ -71,24 +71,24 @@
           $('.fn').not(e.target).removeClass('active-note');
         },
         openNotes: function (index) {
-            $('.intranote').removeClass('active visible');
-            $('.intranote:eq('+ index + ')').addClass('active visible');
+            $('.internote').removeClass('active visible');
+            $('.internote:eq('+ index + ')').addClass('active visible');
             this.curr_index = index;
             this.is_note_open = true;
             $doc.addClass('note-on');
             return false;
         },
         closeNotes: function (e) {
-            var thisNote = $('.intranote.visible');
+            var thisNote = $('.internote.visible');
             var duration = (transition_end && transition_prop) ? 
                 parseFloat(window.getComputedStyle(thisNote[0], '')[transition_prop + 'Duration']) : 0;
-            $('.intranote').removeClass('active');
+            $('.internote').removeClass('active');
             if (duration > 0) {
                 setTimeout(function() {
-                    $('.intranote').removeClass('visible');
+                    $('.internote').removeClass('visible');
                     }, duration*1000);
             } else {
-                 $('.intranote').removeClass('visible');  
+                 $('.internote').removeClass('visible');  
             }    
             this.is_note_open = false;
         },
@@ -106,7 +106,7 @@
             $('#citation-toggle').on('click.' + pluginName, function (e) {
                 e.preventDefault();
                 $doc.toggleClass('notes-hidden');
-                $('.fn, .intranote').toggleClass('visuallyhidden');
+                $('.fn, .internote').toggleClass('visuallyhidden');
                 $('#citation-toggle').text(
                     $doc.hasClass('notes-hidden') ? 'Show Notes' : 'Hide Notes'
                 );
