@@ -64,13 +64,14 @@
           index = $(e.target).attr('data-index');
             if ( this.is_note_open == true && index == this.curr_index) {
               this.closeNotes(e);
+              $(e.target).removeClass('active-note');
             } else {
               this.openNotes(index);
+              $(e.target).addClass('active-note');
             }
             //since the other notes could be attached to any element
             //this selector is as broad as possible
             $('.fn').not(e.target).removeClass('active-note');
-            $(e.target).toggleClass('active-note');
         },
         openNotes: function (index) {
             $('.internote').removeClass('active visible');
