@@ -55,7 +55,7 @@
         },
         addToggle: function (toggle) {
             var self = this;
-            $(toggle).on('click.' + pluginName, function (e) {
+            $(toggle).on('click tap', function (e) {
                 e.preventDefault();
                 self.toggleNotes(e);
             });  
@@ -67,8 +67,10 @@
             } else {
               this.openNotes(index);
             }
-          $(e.target).toggleClass('active-note');
-          $('.fn').not(e.target).removeClass('active-note');
+            //since the other notes could be attached to any element
+            //this selector is as broad as possible
+            $('.fn').not(e.target).removeClass('active-note');
+            $(e.target).toggleClass('active-note');
         },
         openNotes: function (index) {
             $('.internote').removeClass('active visible');
