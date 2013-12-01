@@ -1,28 +1,38 @@
-/* Off Canvas CSS
-/* This is not meant to be one-size-fits-all
-/* Out the box it will give you a 250px wide menu on the right, with js
-/* And a very basic non-js fallback
-*/
-
-/*When we know the offcanvas js is ready, we hide the target menu 
-and set up the offcanvas menu underneat all the rest of the content*/
+/* Internote CSS 
+/* Styles correspond to js classes for hiding and showing notes.
+/* right and left are the fallback selectors if CSS transform is not available. */
 
 .internote {
+    font-family: "freight-sans-pro","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.4;
+    /*cadged from HTML5 boilerplate's visually hidden class*/
     position: absolute;
-    right: -100%;
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    padding: 0; 
+    border: 0; 
+    height: 0;
+    /*moves out of the way*/
+     right: -100%;
 }
 
+/* moves note into view, without transform */
 .internote.active {
     right: 0;
 }
 
+/* undoes two key selectors in keeping something vidsually hidden */
 .internote.active, .internote.visible {
     position: static;
+    height: auto;
 }
 
-
+/* sets the stage for a transform */
 .csstransforms3d.csstransitions .internote {
-    right: 0;
+    right: 0; 
     -webkit-transform: translate3d(100%, 0, 0);
     -moz-transform: translate3d(100%, 0, 0);
     -ms-transform: translate3d(100%, 0, 0);
@@ -39,6 +49,7 @@ and set up the offcanvas menu underneat all the rest of the content*/
     backface-visibility: hidden;
 	}
 
+/* moves note into view, with transform */
 .csstransforms3d.csstransitions.note-on .internote.active{
     -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
     -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);

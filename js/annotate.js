@@ -86,6 +86,7 @@
             var duration = (transition_end && transition_prop) ? 
                 parseFloat(window.getComputedStyle(thisNote[0], '')[transition_prop + 'Duration']) : 0;
             $('.internote').removeClass('active');
+            //visually hide note immediately or after transition if there is one
             if (duration > 0) {
                 setTimeout(function() {
                     $('.internote').removeClass('visible');

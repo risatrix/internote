@@ -162,20 +162,7 @@ p {
     font-style: normal;
     font-size: 22px;
     line-height: 1.45;
-    -webkit-backface-visibility: hidden;
-}
-
-.internote {
-    font-family: "freight-sans-pro","Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.4;
-    /*cadged from HTML5 boilerplate's visually hidden*/
-    overflow: hidden; 
-    clip: rect(0 0 0 0); 
-    padding: 0; 
-    border: 0; 
+    -webkit-backface-visibility: hidden; /* applied to parent as well, to stop iPad flickering*/
 }
 
 .fn {
@@ -204,6 +191,7 @@ p {
 
 }
 
+/*to achieve under-comment wedge effect, transform needs to be available*/
 .csstransforms .fn:after {
     content: " ";
     display: inline;
@@ -230,6 +218,7 @@ p {
     border-left: 4px solid rgb(51, 147, 192);
 }
 
+/*otherwise iPads will hover on anything*/
 .no-touch .fn:hover {
     background-color: rgb(51, 147, 192);
 }
