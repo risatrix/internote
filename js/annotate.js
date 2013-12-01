@@ -50,7 +50,7 @@
               var graf = $(this).parents('p');
               $(this).attr('data-index', index);
               var note = $(notes[index]).addClass('internote');
-              $(note).appendTo(graf);
+              $(note).insertAfter(graf);
             });
         },
         addToggle: function (toggle) {
