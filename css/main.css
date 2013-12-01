@@ -270,8 +270,22 @@ p {
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 520px) {
+    h1, h2 {
+        font-size: 32px;
+        line-height: 1.1;
+    }   
 
+    .wrapper {
+        width: auto;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 30px;
+    }
+
+    p {
+        font-size: 18px;
+    }
 }
 
 
