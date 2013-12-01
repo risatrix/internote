@@ -97,7 +97,7 @@
                 throttle: 0,
                 offset: 250,
                 change: function($el) {
-                    if ($(document.documentElement).hasClass('autonote-on')) {
+                    if ($(document.documentElement).hasClass('autonote-on') && !$(document.documentElement).is('.notes-hidden') ) {
                         $el.click();
                     }
                 },

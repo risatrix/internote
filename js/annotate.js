@@ -108,13 +108,15 @@
             });
         },
         citeToggle: function() {
+            var self = this;
             $('#citation-toggle').on('click.' + pluginName, function (e) {
                 e.preventDefault();
                 $doc.toggleClass('notes-hidden');
-                $('.fn, .internote').toggleClass('visuallyhidden');
-                $('#citation-toggle').text(
+                $('.fn').toggleClass('visuallyhidden').removeClass('active-note');
+                 $('#citation-toggle').text(
                     $doc.hasClass('notes-hidden') ? 'Show Notes' : 'Hide Notes'
                 );
+                self.closeNotes(e);
             });
         }    
     };
