@@ -60,3 +60,10 @@
     -o-transition: -o-transform 300ms ease-in-out;
     transition: transform 300ms ease-in-out;
 }
+
+/* Because the freight is a little much on desktop*/
+@media only screen and (min-width: 768px) {
+    .internote {
+        font-family: "Myriad Pro","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    }
+}
