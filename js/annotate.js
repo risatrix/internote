@@ -95,6 +95,7 @@
                  $('.internote').removeClass('visible');  
             }    
             this.is_note_open = false;
+            $doc.removeClass('note-on');
         },
         autoToggle: function() {
             $('#auto-toggle').on('click.' + pluginName, function (e) {
