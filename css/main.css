@@ -223,7 +223,8 @@ p {
     background-color: rgb(51, 147, 192);
 }
 
-.fn.active-note { background-color: rgb(51, 147, 192); }
+/*.fn.active-note { background-color: rgb(51, 147, 192); }*/
+.fn.active-note { background-color: red; }
 
 .fn.active-note:after, .fn:hover:after {
     border-top: 2px solid rgb(51, 147, 192);
