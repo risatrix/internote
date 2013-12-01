@@ -162,6 +162,7 @@ p {
     font-style: normal;
     font-size: 22px;
     line-height: 1.45;
+    -webkit-backface-visibility: hidden;
 }
 
 .internote {
@@ -199,6 +200,7 @@ p {
         -ms-backface-visibility: hidden;
         -o-backface-visibility: hidden;
         backface-visibility: hidden;
+        -webkit-perspective: 1000
 
 }
 

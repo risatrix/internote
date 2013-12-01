@@ -55,7 +55,7 @@
         },
         addToggle: function (toggle) {
             var self = this;
-            $(toggle).on('click tap', function (e) {
+            $(toggle).on('click touchend', function (e) {
                 e.preventDefault();
                 self.toggleNotes(e);
             });  
