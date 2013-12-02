@@ -45,12 +45,11 @@
           },
         buildNotes: function (target_menu) {
             var notes = $(document).find('.note p').clone();
-            var arr = jQuery.makeArray(notes);
             $('.fn').each (function(index){
               var graf = $(this).parents('p');
               $(this).attr('data-index', index);
               var note = $(notes[index]).addClass('internote');
-              $(note).insertAfter(graf);
+              $(note).appendTo(graf);
             });
         },
         addToggle: function (toggle) {
