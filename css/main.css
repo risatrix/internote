@@ -243,7 +243,7 @@ p {
     background-color: rgb(51, 147, 192);
 }
 
-.csstansforms.no-touch .fn:hover:after {
+.csstransforms.no-touch .fn:hover:after {
     border-top: 2px solid rgb(51, 147, 192);
     border-left: 4px solid rgb(51, 147, 192);
 }
