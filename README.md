@@ -1,8 +1,12 @@
-internote
+##Internotes, Not Footnotes!
 =========
 
-Interactive notes for things you read on screen. <a href="http://risatrix.github.io/internote/">Demo here</a>.
+I grew up with footnotes, and found them flawed on paper. On digital screens, they usually turn into endnotes, which are even worse.
 
-Mobile- and device-friendly. Able to be turned off if you want to read without distraction.
+I was tasked with putting a [play](https://github.com/risatrix/WIC), originally with footnotes, online. I wanted to make interactive notes for things you read on screen. I tried a [side-menu](https://github.com/risatrix/sidenote) type deal, but ulitmately decided it made the most sense to interweave the notes with the text. I used CSS transitions to make them speedy, and additional js to make them device-friendly, and copped the classy style from Medium.
 
-Not really a plugin yet, they just branched off from one.
+Mobile- and device-friendly. There's a toggle to auto-open notes as you scroll, and the notes are able to be hidden if you want to read without distraction.
+
+<a href="http://risatrix.github.io/internote/">Demo here</a>. [Real play](http://women-in-congress.com/) here.
+
+Not really a plugin, just branched off from the idea behind one.
